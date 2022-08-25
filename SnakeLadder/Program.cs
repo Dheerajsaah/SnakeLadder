@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Initial position of Player");
+            SnakeL snakeL = new SnakeL();
+            snakeL.DiceRoll();
         }
     }
 }

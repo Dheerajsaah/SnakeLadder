@@ -8,6 +8,12 @@ namespace SnakeLadder
 {
     internal class SnakeL
     {
-        int PlayerPosition=0;
+       int PlayerPosition = 0;
+        public int DiceRoll() 
+        {
+            Random random = new Random();
+            int diceCount=random.Next(1, 7);
+            return diceCount;
+        }
     }
 }
