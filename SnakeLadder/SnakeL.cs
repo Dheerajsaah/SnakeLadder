@@ -9,7 +9,7 @@ namespace SnakeLadder
     internal class SnakeL
     {
        int PlayerPosition = 0;
-       const int NO_PLAY = 0, LADDER = 1, SNAKE = 2; 
+        const int NO_PLAY = 0, LADDER = 1, SNAKE = 2, WIN_POSITION = 100;
        Random random = new Random();
         public int DiceRoll() 
         {
@@ -38,7 +38,10 @@ namespace SnakeLadder
                         break;
                 }
             }
-            Console.WriteLine(PlayerPosition);
+            if (PlayerPosition == WIN_POSITION)
+            {
+                Console.WriteLine(PlayerPosition);
+            }
         }
     }
 }
