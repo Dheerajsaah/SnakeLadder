@@ -18,18 +18,25 @@ namespace SnakeLadder
         }
         public void Play()
         {
-            int Option = random.Next(0, 3);
-            switch (Option)
+            while (PlayerPosition < 100)
             {
-                case NO_PLAY:
-                    PlayerPosition += 0;
-                    break;
-                case LADDER:
-                    PlayerPosition +=DiceRoll();
-                    break;
-                case SNAKE:
-                    PlayerPosition -=DiceRoll();
-                    break;
+                int Option = random.Next(0, 3);
+                switch (Option)
+                {
+                    case NO_PLAY:
+                        PlayerPosition += 0;
+                        break;
+                    case LADDER:
+                        PlayerPosition += DiceRoll();
+                        break;
+                    case SNAKE:
+                        PlayerPosition -= DiceRoll();
+                        if (PlayerPosition < 0)
+                        {
+                            PlayerPosition = 0;
+                        }
+                        break;
+                }
             }
             Console.WriteLine(PlayerPosition);
         }
