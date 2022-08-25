@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Displaying Snake Ladder Problem");
+            Console.WriteLine("Initial position of Player");
         }
     }
 }
